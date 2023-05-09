@@ -12,7 +12,9 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import environ
-
+import os
+import sys
+import dj_database_url
 env = environ.Env()
 environ.Env.read_env()
 
@@ -106,21 +108,7 @@ WSGI_APPLICATION = 'advisory_backend.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-     'default': {
-
-        'ENGINE': 'django.db.backends.postgresql',
-
-        'NAME': env('DBNAME'),
-
-        'USER': env('DBUSER'),
-
-        'PASSWORD': env('DBPASS'),
-
-        'HOST': env('DBHOST'),
-
-        'PORT': '5432',
-
-    }
+      "default": dj_database_url.parse(os.environ.get("DATABASE_URL")),
 }
 
 
