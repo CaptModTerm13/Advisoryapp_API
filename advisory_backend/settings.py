@@ -46,12 +46,12 @@ INSTALLED_APPS = [
     'base.apps.BaseConfig',
     'rest_framework',
     "rest_framework.authtoken",
-
     "allauth",
-"allauth.account",
-"allauth.socialaccount",
-"dj_rest_auth",
-"dj_rest_auth.registration",
+    "allauth.account",
+    "allauth.socialaccount",
+    "dj_rest_auth",
+    "dj_rest_auth.registration",
+    'django_filters',
 
 ]
 REST_FRAMEWORK = {
