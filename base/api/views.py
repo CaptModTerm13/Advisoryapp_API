@@ -11,7 +11,8 @@ class UserView(generics.ListAPIView):
     queryset= CustomUser.objects.all()
     serializer_class= ListUserSerializer
     filter_backends = [DjangoFilterBackend]
-    filterset_fields = ['username', 'batch']
+    filterset_fields = ['batch']
+    search_fields = ['username']
 
 class UserProfileView(generics.RetrieveUpdateDestroyAPIView):
    queryset=CustomUser.objects.all()
