@@ -10,15 +10,16 @@ class CustomUser(AbstractUser):
         ('F', 'Female'),
     )
     BATCH_CHOICES = (
-        ('A', 'B22ECA'),
-        ('B', 'B22ECB'),
+        ('B22ECA', 'B22ECA'),
+        ('B22ECB', 'B22ECB'),
+        ('Default','Default'),
     )
     ROLES = (
         ('S', 'Student'),
         ('A', 'Advisor'),
     )
-    gender = models.CharField(max_length=1, choices=GENDER_CHOICES,default="A")
-    batch = models.CharField(max_length=7,choices=BATCH_CHOICES,default="M")
+    gender = models.CharField(max_length=1, choices=GENDER_CHOICES,default="M")
+    batch = models.CharField(max_length=7,choices=BATCH_CHOICES,default="Default")
     role = models.CharField(max_length=7,choices=ROLES,default="S")
     # add additional fields in here
 
