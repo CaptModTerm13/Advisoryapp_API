@@ -20,10 +20,6 @@ class UserProfileView(generics.RetrieveUpdateDestroyAPIView):
    serializer_class=UserProfileSerializer
    lookup_field = "username"
    
-class UpdateUser(generics.UpdateAPIView):
-     queryset=CustomUser.objects.all()
-     serializer_class=UserProfileSerializer
-     lookup_field = "username"
 
 
 
