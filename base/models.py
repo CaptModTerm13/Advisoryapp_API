@@ -29,3 +29,8 @@ class CustomUser(AbstractUser):
 
     def __str__(self):
         return self.username
+    
+
+    class Avtivity(models.Model):
+        name=models.CharField(max_length=100)
+        date=models.CharField(max_length=50)
