@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-import environ
+
 import os
 import sys
 import dj_database_url
@@ -100,12 +100,14 @@ EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 SITE_ID = 1
 
 WSGI_APPLICATION = 'advisory_backend.wsgi.application'
-DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
+#DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
+DEVELOPMENT_MODE=False
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 if DEVELOPMENT_MODE is True:
+    SECRET_KEY="s2)1ywu@6(l(e7xu$!%c%v(0w2v=31*^6!s!i9&ijdl^da5(*a"
     DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.sqlite3",

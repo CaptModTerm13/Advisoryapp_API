@@ -21,10 +21,10 @@ class CustomUser(AbstractUser):
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES,default="M")
     batch = models.CharField(max_length=7,choices=BATCH_CHOICES,default="Default")
     role = models.CharField(max_length=7,choices=ROLES,default="S")
-    phone_no=models.CharField(null=True,blank=True);
+    phone_no=models.CharField(null=True,blank=True,max_length=20);
     guardian=models.CharField(max_length=40,null=True,blank=True);
-    guardian_no=models.CharField(null=True,blank=True);
-    teacher_remarks=models.CharField(null=True,blank=True);
+    guardian_no=models.CharField(null=True,blank=True,max_length=20);
+    teacher_remarks=models.CharField(null=True,blank=True,max_length=200);
     # add additional fields in here
 
     def __str__(self):
