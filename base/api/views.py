@@ -20,7 +20,7 @@ class UserProfileView(generics.RetrieveUpdateDestroyAPIView):
    serializer_class=UserProfileSerializer
    lookup_field = "username"
 
-class ActivityView(generics.RetrieveUpdateDestroyAPIView):
+class ActivityView(generics.CreateAPIView):
     queryset= Activity.objects.all()
     serializer_class=ActivitySerializer
    
