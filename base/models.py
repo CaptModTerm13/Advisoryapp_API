@@ -31,6 +31,6 @@ class CustomUser(AbstractUser):
         return self.username
     
 
-    class Avtivity(models.Model):
+class Activity(models.Model):
         name=models.CharField(max_length=100)
         date=models.CharField(max_length=50)

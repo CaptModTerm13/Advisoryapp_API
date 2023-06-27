@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework import generics
-from base.models import CustomUser
-from .serializers import ListUserSerializer,UserProfileSerializer
+from base.models import CustomUser,Activity
+from .serializers import ListUserSerializer,UserProfileSerializer,ActivitySerializer
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import SearchFilter
 
@@ -19,6 +19,10 @@ class UserProfileView(generics.RetrieveUpdateDestroyAPIView):
    queryset=CustomUser.objects.all()
    serializer_class=UserProfileSerializer
    lookup_field = "username"
+
+class ActivityView(generics.RetrieveUpdateDestroyAPIView):
+    queryset= Activity.objects.all()
+    serializer_class=ActivitySerializer
    
 
 
