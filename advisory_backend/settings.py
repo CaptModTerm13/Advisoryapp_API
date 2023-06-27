@@ -101,7 +101,7 @@ SITE_ID = 1
 
 WSGI_APPLICATION = 'advisory_backend.wsgi.application'
 #DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
-DEVELOPMENT_MODE=True
+DEVELOPMENT_MODE=False
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
