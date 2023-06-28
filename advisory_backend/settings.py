@@ -61,7 +61,6 @@ REST_FRAMEWORK = {
 # new
 ],
 "DEFAULT_AUTHENTICATION_CLASSES": [
-"rest_framework.authentication.SessionAuthentication",
 "rest_framework.authentication.TokenAuthentication",
 # new
 ],
