@@ -23,6 +23,8 @@ class UserProfileView(generics.RetrieveUpdateDestroyAPIView):
 class ActivityView(generics.CreateAPIView):
     queryset= Activity.objects.all()
     serializer_class=ActivitySerializer
+
+
    
 
 
