@@ -23,4 +23,8 @@ class UserProfileSerializer(serializers.ModelSerializer):
         class Meta:
            model=CustomUser
            fields=("id","username","email","batch","role","gender","admission_number","dob","phone_no","guardian","guardian_no","teacher_remarks","activity")
-        
+
+class UserProfileUpdateSerializer(serializers.ModelSerializer):
+        class Meta:
+           model=CustomUser
+           fields=("id","username","email","batch","role","gender","admission_number","dob","phone_no","guardian","guardian_no","teacher_remarks")
