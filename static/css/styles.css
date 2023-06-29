@@ -1,8 +1,40 @@
-#activity_name{
-    color: blue;
-    border: red;
+
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f2f2f2;
+    padding: 20px;
 }
 
-h1{
-    color: red;
+.header img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.header h1 {
+    font-size: 24px;
+}
+
+.content {
+    margin: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input[type="submit"] {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #45a049;
 }

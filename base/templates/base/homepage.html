@@ -1,12 +1,17 @@
 {% load static %}
 {% load account %}
 
-
+<head>
 <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+<div class="header">
+    <img src="images/logo.jpeg" alt="Logo">
+    <h1>Activity Registration </h1>
+</div>
 
-<h1>Activity Registration </h1>
 
-
+<div class="content">
 <form enctype="multipart/form-data" action="/home" method="post">
     {% csrf_token %}
     <label> Name</label> {{ form.activity_name}}<br>
@@ -20,3 +25,5 @@
 <form action="/accounts/logout" >
     <input  value="signout" type="submit"/>
 </form>
+</div>
+</body>
