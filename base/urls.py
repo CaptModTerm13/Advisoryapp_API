@@ -1,10 +1,16 @@
 from django.urls import path
-from .views import index,homepage
+from .views import index,success,get_name
 from allauth.account.views import LoginView
 
 urlpatterns=[
-    path("",LoginView.as_view(),),
-    path("home",homepage,name="homepage")
+    path("",index),
+    path("login",LoginView.as_view(),),
+    path("home",get_name,name="homepage"),
+    path("sucess",success)
+  
+
+  
+
   
     
 ]

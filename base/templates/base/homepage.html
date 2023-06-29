@@ -1,1 +1,22 @@
-<h1>Succesfully logged in</h1>
+{% load static %}
+{% load account %}
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+
+<h1>Activity Registration </h1>
+
+
+<form enctype="multipart/form-data" action="/home" method="post">
+    {% csrf_token %}
+    <label> Name</label> {{ form.activity_name}}<br>
+   
+       <label> Date</label>{{form.date}}<br>
+       <label>Upload File</label>{{form.file}}<br>
+    <input type="submit" value="Submit">
+</form>
+
+
+<form action="/accounts/logout" >
+    <input  value="signout" type="submit"/>
+</form>
